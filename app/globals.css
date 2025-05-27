@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 70% 25%;
+    --foreground: 240 10% 3.9%;
+    --card: 270 70% 20%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142 70% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 270 30% 30%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 270 30% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 270 30% 30%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 30% 30%;
+    --input: 270 30% 30%;
+    --ring: 142 70% 45%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 270 70% 15%;
+    --foreground: 0 0% 98%;
+    --card: 270 70% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 270 70% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 70% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 270 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 270 30% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 270 30% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 30% 20%;
+    --input: 270 30% 20%;
+    --ring: 142 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.sidebar-item {
+  @apply flex items-center gap-2 px-4 py-2 text-sm transition-colors hover:bg-secondary/50 rounded-md;
+}
+
+.sidebar-item.active {
+  @apply bg-secondary/50 text-primary;
+}
+
+.category-card {
+  @apply flex items-center gap-2 p-4 bg-card hover:bg-card/80 transition-all rounded-md border border-border;
+}
+
+.banner-background {
+  background-image: url("/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
