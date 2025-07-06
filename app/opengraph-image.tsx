@@ -1,88 +1,115 @@
-import { ImageResponse } from "next/server"
+import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
 
-export async function GET(): Promise<Response> {
-  try {
-    // Load external image and convert it to ArrayBuffer
-    const interRegular = await fetch(new URL("../../../public/fonts/Inter-Regular.ttf", import.meta.url)).then((res) =>
-      res.arrayBuffer(),
-    )
-
-    const interBold = await fetch(new URL("../../../public/fonts/Inter-Bold.ttf", import.meta.url)).then((res) =>
-      res.arrayBuffer(),
-    )
-
-    return new ImageResponse(
+export default async function Image() {
+  return new ImageResponse(
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        width: "100%",
+        padding: "32px",
+        backgroundImage: "linear-gradient(to bottom right, #1a1a1a, #0a0a0a)",
+        borderRadius: "12px",
+        border: "2px solid #8b5cf6",
+      }}
+    >
       <div
         style={{
-          height: "100%",
-          width: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "rgb(0,0,0)",
+          padding: "20px",
+          backgroundColor: "rgba(0,0,0,0.7)",
+          borderRadius: "8px",
+          border: "1px solid #8b5cf6",
         }}
       >
+        <h1
+          style={{
+            fontSize: "32px",
+            fontWeight: "bold",
+            color: "white",
+            marginBottom: "16px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          📜 RÈGLEMENT DU SERVEUR - GALACTIC RP V2 🚀
+        </h1>
+
+        <p style={{ fontSize: "18px", color: "white", marginBottom: "16px" }}>
+          Bienvenue sur <span style={{ fontWeight: "bold" }}>Galactic RP V2</span> ! Afin de garantir une expérience RP
+          immersive et agréable pour tous, merci de prendre connaissance et de respecter notre règlement.
+        </p>
+
+        <div style={{ marginBottom: "8px" }}>
+          <p style={{ fontSize: "18px", color: "#fbbf24", fontWeight: "bold", display: "flex", alignItems: "center" }}>
+            ⚠️ Principales règles à retenir :
+          </p>
+        </div>
+
+        <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+          {[
+            "Respect & Fair-Play",
+            "Pas de Cheat / Mod Menu",
+            "Pas de Powergaming / Metagaming",
+            "Fear RP & NLR",
+            "Scénarios RP cohérents",
+          ].map((rule, i) => (
+            <li
+              key={i}
+              style={{
+                fontSize: "16px",
+                color: "white",
+                marginBottom: "8px",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <span style={{ color: "#10b981", marginRight: "8px" }}>✅</span>{" "}
+              <span style={{ fontWeight: "bold" }}>{rule}</span>
+            </li>
+          ))}
+        </ul>
+
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            padding: "20px",
-            border: "6px solid rgb(255,255,255)",
-            borderRadius: "20px",
+            marginTop: "20px",
           }}
         >
-          <h1
+          <div
             style={{
-              fontSize: "60px",
-              fontFamily: "Inter",
-              fontWeight: 800,
-              color: "rgb(255,255,255)",
-              margin: 0,
-              padding: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              backgroundColor: "#2d1b69",
+              padding: "12px 24px",
+              borderRadius: "8px",
             }}
           >
-            RÈGLEMENT DU SERVEUR - NEW LAST RP 🚀
-          </h1>
-          <p
-            style={{
-              fontSize: "40px",
-              fontFamily: "Inter",
-              color: "rgb(255,255,255)",
-              marginTop: "20px",
-            }}
-          >
-            Bienvenue sur New Last RP
-          </p>
+            <div
+              style={{
+                backgroundColor: "#3b2483",
+                borderRadius: "8px",
+                padding: "8px",
+                marginBottom: "8px",
+              }}
+            >
+              <span style={{ fontSize: "32px" }}>📖</span>
+            </div>
+            <p style={{ fontSize: "24px", color: "white", fontWeight: "bold" }}>▶ RÈGLEMENTS ◀</p>
+          </div>
         </div>
-      </div>,
-      {
-        width: 1200,
-        height: 630,
-        fonts: [
-          {
-            name: "Inter",
-            data: interRegular,
-            style: "normal",
-            weight: 400,
-          },
-          {
-            name: "Inter",
-            data: interBold,
-            style: "normal",
-            weight: 700,
-          },
-        ],
-      },
-    )
-  } catch (e) {
-    console.error(`${e}`)
-    return new Response(`Failed to generate the image`, {
-      status: 500,
-    })
-  }
+      </div>
+    </div>,
+    {
+      width: 1200,
+      height: 630,
+    },
+  )
 }

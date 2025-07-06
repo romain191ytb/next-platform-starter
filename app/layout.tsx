@@ -8,28 +8,28 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "New Last RP - Communauté de Roleplay Discord",
+  title: "GalacticRP V2 - Communauté de Roleplay Discord",
   description:
-    "Site officiel du serveur de roleplay Discord New Last RP. Découvrez nos règlements, guides et rejoignez notre communauté RP immersive!",
+    "Site officiel du serveur de roleplay Discord GalacticRP V2. Découvrez nos règlements, guides et rejoignez notre communauté RP immersive!",
   openGraph: {
-    title: "RÈGLEMENT DU SERVEUR - NEW LAST RP 🚀",
+    title: "RÈGLEMENT DU SERVEUR - GALACTIC RP V2 🚀",
     description:
-      "Bienvenue sur New Last RP! Afin de garantir une expérience RP immersive et agréable pour tous, merci de prendre connaissance et de respecter notre règlement.",
+      "Bienvenue sur Galactic RP V2! Afin de garantir une expérience RP immersive et agréable pour tous, merci de prendre connaissance et de respecter notre règlement.",
     images: [
       {
         url: "https://votre-domaine.com/api/og",
         width: 800,
         height: 600,
-        alt: "Règlement du serveur New Last RP",
+        alt: "Règlement du serveur GalacticRP",
       },
     ],
     type: "website",
-    siteName: "New Last RP",
+    siteName: "GalacticRP V2",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RÈGLEMENT DU SERVEUR - NEW LAST RP 🚀",
-    description: "Bienvenue sur New Last RP! Découvrez nos règlements et rejoignez notre communauté RP immersive!",
+    title: "RÈGLEMENT DU SERVEUR - GALACTIC RP V2 🚀",
+    description: "Bienvenue sur Galactic RP V2! Découvrez nos règlements et rejoignez notre communauté RP immersive!",
     images: ["https://votre-domaine.com/api/og"],
   },
   metadataBase: new URL("https://votre-domaine.com"),
