@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <p>&copy; {new Date().getFullYear()} Pureside V RP. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} New Last RP. All rights reserved.</p>
         {/* Add any other relevant information or links here */}
       </div>
       <style jsx>{`

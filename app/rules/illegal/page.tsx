@@ -25,7 +25,7 @@ export default function IllegalRulesPage() {
           Règlements Illégaux
         </h1>
         <p className="text-lg text-muted-foreground">
-          Toutes les règles concernant les activités illégales sur Pureside V RP
+          Toutes les règles concernant les activités illégales sur New Last RP
         </p>
       </div>
 

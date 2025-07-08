@@ -4,7 +4,7 @@ const Navbar = () => {
       <div className="container mx-auto py-4 px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center">
-          <span className="hidden font-bold sm:inline-block text-xl text-gradient">Pureside V RP</span>
+          <span className="hidden font-bold sm:inline-block text-xl text-gradient">New Last RP</span>
         </a>
 
         {/* Navigation Links (Example) */}

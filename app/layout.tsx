@@ -8,13 +8,13 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Pureside V RP - Communauté de Roleplay Discord",
+  title: "New Last RP - Communauté de Roleplay Discord",
   description:
-    "Site officiel du serveur de roleplay Discord Pureside V RP. Découvrez nos règlements, guides et rejoignez notre communauté RP immersive!",
+    "Site officiel du serveur de roleplay Discord New Last RP. Découvrez nos règlements, guides et rejoignez notre communauté RP immersive!",
   openGraph: {
-    title: "RÈGLEMENT DU SERVEUR - PURESIDE V RP 🚀",
+    title: "RÈGLEMENT DU SERVEUR - NEW LAST RP 🚀",
     description:
-      "Bienvenue sur Pureside V RP! Afin de garantir une expérience RP immersive et agréable pour tous, merci de prendre connaissance et de respecter notre règlement.",
+      "Bienvenue sur New Last RP! Afin de garantir une expérience RP immersive et agréable pour tous, merci de prendre connaissance et de respecter notre règlement.",
     images: [
       {
         url: "https://votre-domaine.com/api/og",
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
-    siteName: "Pureside V RP",
+    siteName: "New Last RP",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RÈGLEMENT DU SERVEUR - PURESIDE V RP 🚀",
-    description: "Bienvenue sur Pureside V RP! Découvrez nos règlements et rejoignez notre communauté RP immersive!",
+    title: "RÈGLEMENT DU SERVEUR - NEW LAST RP 🚀",
+    description: "Bienvenue sur New Last RP! Découvrez nos règlements et rejoignez notre communauté RP immersive!",
     images: ["https://votre-domaine.com/api/og"],
   },
   metadataBase: new URL("https://votre-domaine.com"),
