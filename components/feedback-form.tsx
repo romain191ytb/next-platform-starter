@@ -2,24 +2,32 @@
 
 import type React from "react"
 
-/**
- * Stub très simple : suffisamment pour satisfaire l’import
- * et permettre une compilation sans erreurs.
- */
+import { useState } from "react"
+import { Card } from "./card"
+
 export function FeedbackForm() {
-  async function handleSubmit(e: React.FormEvent) {
+  const [sent, setSent] = useState(false)
+
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
-    alert("Merci pour votre feedback !")
+    // Ici on simule l’envoi ; branchez un Server Action plus tard
+    setSent(true)
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto w-full max-w-sm space-y-4 rounded-lg bg-gradient-card p-6">
-      <h2 className="text-center text-xl font-bold text-gradient">Feedback</h2>
-      <input name="name" className="input w-full" placeholder="Votre nom" required />
-      <textarea name="message" className="input w-full" rows={4} placeholder="Votre message" required />
-      <button type="submit" className="btn w-full">
-        Envoyer
-      </button>
-    </form>
+    <Card className="max-w-md mx-auto">
+      {sent ? (
+        <p className="text-center font-semibold">Merci pour votre retour !</p>
+      ) : (
+        <form onSubmit={onSubmit} className="space-y-4">
+          <h3 className="text-xl font-bold text-center">Feedback</h3>
+          <input name="name" className="input w-full" placeholder="Votre nom" required />
+          <textarea name="message" className="input w-full" rows={4} placeholder="Votre message" required />
+          <button type="submit" className="btn w-full">
+            Envoyer
+          </button>
+        </form>
+      )}
+    </Card>
   )
 }
