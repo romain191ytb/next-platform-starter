@@ -4,7 +4,7 @@ const Navbar = () => {
       <div className="container mx-auto py-4 px-6 flex items-center justify-between">
         {/* Titre sans logo */}
         <a href="/" className="flex items-center">
-          <span className="font-bold text-xl text-white">New Last RP</span>
+          <span className="font-bold text-xl text-white">Redlife RP</span>
         </a>
 
         {/* Navigation Links (Example) */}
