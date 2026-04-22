@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     images: ["https://votre-domaine.com/api/og"],
   },
   metadataBase: new URL("https://votre-domaine.com"),
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

@@ -14,25 +14,25 @@ body {
 
 @layer base {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 0 70% 15%;
+    --foreground: 0 0% 98%;
+    --card: 0 65% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 65% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 60% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 50% 18%;
+    --muted-foreground: 0 20% 70%;
+    --accent: 0 60% 25%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 262 83% 58%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 50% 25%;
+    --input: 0 50% 20%;
+    --ring: 0 72% 51%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -84,37 +84,37 @@ body {
   }
 }
 
-/* Dégradés personnalisés */
+/* Dégradés personnalisés - Rouge */
 .bg-gradient-primary {
-  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #dc2626 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #7f1d1d 100%);
 }
 
 .bg-gradient-secondary {
-  background: linear-gradient(45deg, #7c3aed 0%, #dc2626 100%);
+  background: linear-gradient(45deg, #ef4444 0%, #991b1b 100%);
 }
 
 .bg-gradient-card {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.15) 0%, rgba(127, 29, 29, 0.15) 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #dc2626 100%);
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Navbar avec dégradé */
+/* Navbar avec fond rouge */
 .navbar-gradient {
-  background: linear-gradient(90deg, rgba(139, 92, 246, 0.95) 0%, rgba(220, 38, 38, 0.95) 100%);
+  background: linear-gradient(90deg, rgba(185, 28, 28, 0.95) 0%, rgba(127, 29, 29, 0.95) 100%);
   backdrop-filter: blur(10px);
 }
 
-/* Cards avec bordure dégradée */
+/* Cards avec bordure rouge */
 .card-gradient {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(220, 38, 38, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(127, 29, 29, 0.1) 100%);
   border: 1px solid;
-  border-image: linear-gradient(135deg, #8b5cf6, #dc2626) 1;
+  border-image: linear-gradient(135deg, #dc2626, #7f1d1d) 1;
 }
 
 @layer base {

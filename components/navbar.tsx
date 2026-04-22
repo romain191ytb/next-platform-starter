@@ -1,10 +1,10 @@
 const Navbar = () => {
   return (
-    <nav className="navbar-gradient border-b border-purple-500/20 sticky top-0 z-50">
+    <nav className="navbar-gradient border-b border-red-500/30 sticky top-0 z-50">
       <div className="container mx-auto py-4 px-6 flex items-center justify-between">
-        {/* Logo */}
+        {/* Titre sans logo */}
         <a href="/" className="flex items-center">
-          <span className="hidden font-bold sm:inline-block text-xl text-gradient">New Last RP</span>
+          <span className="font-bold text-xl text-white">New Last RP</span>
         </a>
 
         {/* Navigation Links (Example) */}
